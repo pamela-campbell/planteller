@@ -1,0 +1,56 @@
+.main {
+    .hero {
+        @include flex (80%, flex, column, center, center, wrap, 4% auto, 0%);
+
+        img {
+            width: 50%;
+            margin: 0% auto 4% auto;
+        }
+        p{
+            text-align: justify;
+        }
+    }
+
+    .box {
+        @extend.hero;
+        width: 80%;
+        border: 10px solid #ffff;
+        height: 80vh;
+
+        p {
+            text-align: left;
+        }
+
+    }
+
+    .store {
+        @extend.hero;
+        background-color: $bg-green;
+
+        h2 {
+            margin: 2% auto;
+        }
+        .store_photos{
+            @include flex (auto, flex, row, center, flex-end, warp, 4% auto, 0%);
+            img{
+                height:50%;
+                margin: 3%;
+            }
+        }
+    }
+
+    .care {
+
+        background-color: $bg-brown;
+
+        .links {
+            height: 30vh;
+        }
+    }
+
+    .game {
+
+        background-color: $bg-rose;
+
+    }
+}

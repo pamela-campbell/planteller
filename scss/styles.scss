@@ -1,0 +1,16 @@
+@import "bs-scss/bootstrap.scss";
+
+@import "base/variables";
+@import "base/mixines";
+@import "base/generals";
+
+
+
+
+@import "components/header";
+@import "components/footer";
+
+@import "pages/index";
+
+
+@import "base/mq";
