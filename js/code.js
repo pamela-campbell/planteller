@@ -189,3 +189,20 @@ const articulosVarios = [
 
 const todosLosProductos = plantas.concat(kitDeArticulos, articulosVarios);
 console.table(todosLosProductos);
+
+//indexOf
+let nombre=prompt("Ingresa el nombre a buscar");
+let productoEncontrado;
+for (const producto of todosLosProductos){
+    if(producto.nombre == nombre){
+        alert("El producto encontrado es:");
+        let aString=producto.isbn+"\n"+producto.tipo+"\n"+producto.nombre+"\n"+producto.precio;
+        alert(aString);
+        productoEncontrado=producto;
+    }
+    else{alert("Lo sentimos, no disponemos de ese producto")};
+    break;
+    
+}
+ 
+console.table("El producto se encuentra en el indice: "+todosLosProductos.indexOf(productoEncontrado));
