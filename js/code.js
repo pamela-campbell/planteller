@@ -143,20 +143,26 @@ function cargarProductos() {
     productos.push(new Producto(133114, 'Gift card Planteller', 1500, './images/img_12.jpg'));
 }
 
-console.table(cargarProductos());
 
 
-let cards = document.querySelector(".cards");
-cards.innerHTML = `
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="${productos.foto}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">${productos.nombre}</h5>
-                <p class="card-text">$ ${productos.precio}</p>
-                <a href="#" id="miBoton" class="btn btn-primary">lo quiero</a>
-            </div>
+
+//cards
+let cards=document.getElementById("cards");
+for(const producto of productos){
+    let card=document.createElement("div");
+    card.className="card col-md-3";
+    card.innerHTML=`
+        <div class="card-body">
+        <img class="card-img-top" src="${producto.foto}" alt="Card image cap">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <p class="card-text">${producto.precio}</p>
+            <button class="btn btn-primary">Comprar</a>
         </div>
-`;
+    `;
+    cards.append(card);
+}
+
+
 
 // const plantas = [{
 //         isbn: "122111",

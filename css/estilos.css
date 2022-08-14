@@ -10121,7 +10121,8 @@ textarea.form-control-lg {
   grid-template-rows: 0.5fr auto 0.5fr;
   grid-template-areas: "header" "main" "footer";
 }
-.grid__container h1, .grid__container .h1 {
+
+h1, .h1 {
   font-family: Bungee;
   font-size: 2rem;
   font-weight: 400;
@@ -10148,6 +10149,17 @@ h3, .h3 {
   font-family: Bungee;
   font-size: 1rem;
   font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
+
+.card-title {
+  font-family: Bungee;
+  font-size: 1rem;
+  font-weight: 300;
   line-height: 2rem;
   text-align: center;
   text-transform: uppercase;
@@ -10204,6 +10216,26 @@ button {
   transition: 2s;
 }
 button:hover {
+  transform: scale(0.9);
+}
+
+#miBoton {
+  font-family: Inconsolata;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  padding: 2% 6%;
+  border: none;
+  border-radius: 20px;
+  color: #E9FF70;
+  background-color: #D6A578;
+  transition: 2s;
+}
+#miBoton:hover {
   transform: scale(0.9);
 }
 
