@@ -8,16 +8,19 @@ let cartasTarot = document.getElementById("cartasTarot");
 //Defino la funcion del array de objetos de la baraja
 const obtenerCartas = () => [{
         imagen: "../icons/card_1.png",
+        imagenDorso:"../icons/bk_card.png",
         nombre: "El Proceso",
         descripcion: "Estas en camino a encontrar tu planta ideal. Mira las señales, un potus esta por entrar a tu vida."
     },
     {
         imagen: "../icons/card_2.png",
+        imagenDorso:"../icons/bk_card.png",
         nombre: "El Suelo",
         descripcion: "Estas list@ para dar un salto en tu vida. Atrévete a grandes planes y plantas, como el Ficus."
     },
     {
         imagen: "../icons/card_3.png",
+        imagenDorso:"../icons/bk_card.png",
         nombre: "El Crecimiento",
         descripcion: "Estas en una etapa de contemplar los logros conseguidos. Agradecételo con una hermosa Calathea."
     },
@@ -36,20 +39,25 @@ const mezclar = () => {
 //creo las cartas en el HTML (DOM) usando la funcion de mezclar 
 
 const creadorCartas = () => {
-        const barajaTarot = mezclar();
-        for (const carta of barajaTarot) {
-            let cartaTarot = document.createElement("div");
-            let frente = document.createElement ('img');
-            let dorso =document.createElement ("div");
-            cartaTarot.className = "cartaTarot";
-            frente.className= "frente";
-            dorso.className="dorso";
-            //le agrego la imagen al src
-            frente.src = carta.imagen;
-            // le asigno un padre a los elemntos creados
-            cartasTarot.append(cartaTarot);
-            cartaTarot.append(frente);
-            cartaTarot.append(dorso);
-        };
+    const barajaTarot = mezclar();
+    for (const carta of barajaTarot) {
+        let cartaTarot = document.createElement("div");
+        let frente = document.createElement('img');
+        let dorso = document.createElement("img");
+        cartaTarot.className = "cartaTarot";
+        frente.className = "frente";
+        dorso.className = "dorso";
+        //le agrego la imagen al src
+        frente.src = carta.imagen;
+        dorso.src = carta.imagenDorso;
+        // le asigno un padre a los elemntos creados
+        cartasTarot.append(cartaTarot);
+        cartaTarot.append(frente);
+        cartaTarot.append(dorso);
+        //evento para dar vuelta las cartas
+        cartaTarot.addEventListener("click", (flipcard) => {
+            cartaTarot.classList.toggle("toogleCard");
+        });
     };
-    creadorCartas();
+};
+creadorCartas();
