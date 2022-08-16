@@ -10219,7 +10219,7 @@ button:hover {
   transform: scale(0.9);
 }
 
-#miBoton {
+#boton {
   font-family: Inconsolata;
   font-size: 1.1rem;
   font-weight: 400;
@@ -10235,7 +10235,7 @@ button:hover {
   background-color: #D6A578;
   transition: 2s;
 }
-#miBoton:hover {
+#boton:hover {
   transform: scale(0.9);
 }
 
@@ -10308,21 +10308,51 @@ button:hover {
   background-color: #E2B2C1;
 }
 
-.main #juegotarot {
-  width: 60%;
+.main .juego {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 4% auto 8% auto;
+  flex-wrap: no-wrap;
+  margin: auto;
   padding: 0%;
+  background-image: url(../icons/bk_card.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80vh;
 }
-.main #juegotarot #cartasTarot {
+.main .juego #cartasTarot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-wrap: no-wrap;
+  margin: auto;
+  padding: 0%;
+  height: 80vh;
+  background-color: #FAF9E5;
 }
-.main #juegotarot #sacarcarta {
-  align-items: center;
+.main .juego #cartasTarot .enlaceTexto {
+  color: #E9FF70;
+  background-color: #D6A578;
+}
+.main .juego h2, .main .juego .h2 {
+  color: #F2766A;
+  font-size: 1rem;
+}
+.main .juego #sacarCarta {
+  background-color: #FAF9E5;
+  transition: 2s;
+  justify-content: flex-start;
+  width: 100%;
+  height: 15vh;
+}
+.main .juego #sacarCarta:hover {
+  transform: scale(1.1);
+  background-color: #FAF9E5;
 }
 
 /*# sourceMappingURL=estilos.css.map */
