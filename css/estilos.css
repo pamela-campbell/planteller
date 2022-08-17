@@ -10361,63 +10361,63 @@ button:hover {
   height: auto;
 }
 .main .store {
-  background-color: #c1d7ae;
+  background-color: #dac5bf;
 }
 .main .care {
-  background-color: #dcbde3;
+  background-color: #bdd1e2;
 }
 .main .care .links {
   margin: 2% auto;
 }
 .main .game {
-  background-color: #d2a67c;
+  background-color: #deb792;
 }
 
-.main .juego {
+.main .juegoDeTarot {
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: no-wrap;
-  margin: auto;
+  flex-wrap: wrap;
+  margin: 4% auto;
   padding: 0%;
-  background-image: url(../icons/bk_card.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 80vh;
 }
-.main .juego #cartasTarot {
-  width: 100%;
+.main .juegoDeTarot h1, .main .juegoDeTarot .h1 {
+  margin: 3% auto;
+}
+.main .juegoDeTarot p {
+  margin: 3%;
+  text-align: justify;
+}
+.main .juegoDeTarot #cartasTarot {
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: no-wrap;
-  margin: auto;
+  flex-wrap: wrap;
+  margin: 4% auto;
   padding: 0%;
-  height: 80vh;
-  background-color: #FAF9E5;
 }
-.main .juego #cartasTarot .enlaceTexto {
+.main .juegoDeTarot #cartasTarot .card {
+  background-color: #FAF9E5;
+  border: none;
+}
+.main .juegoDeTarot #cartasTarot .enlaceTexto {
   color: #E9FF70;
   background-color: #d2a67c;
 }
-.main .juego h2, .main .juego .h2 {
+.main .juegoDeTarot h2, .main .juegoDeTarot .h2 {
   color: #F2766A;
   font-size: 1rem;
 }
-.main .juego #sacarCarta {
-  background-color: #FAF9E5;
+.main .juegoDeTarot #sacarCarta {
+  background-color: transparent;
   transition: 2s;
-  justify-content: flex-start;
-  width: 100%;
-  height: 15vh;
 }
-.main .juego #sacarCarta:hover {
-  transform: scale(1.1);
-  background-color: #FAF9E5;
+.main .juegoDeTarot #sacarCarta:hover {
+  transform: scale(0.9);
 }
 
 /*# sourceMappingURL=estilos.css.map */

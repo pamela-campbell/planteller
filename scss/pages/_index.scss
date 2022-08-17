@@ -20,7 +20,6 @@
             margin: 2% auto 0% auto;
             color: $text-main-color
         }
-
     }
 
     .box {
@@ -63,11 +62,11 @@
     }
 
     .store {
-        background-color: $bg-green;
+        background-color: $bg-rose;
     }
 
     .care {
-        background-color: $bg-rose;
+        background-color: $bg-lightblue;
 
         .links {
             margin: 2% auto;
@@ -76,6 +75,6 @@
     }
 
     .game {
-        background-color: $bg-brown;
+        background-color: $bg-lightbrown;
     }
 }
