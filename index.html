@@ -25,7 +25,7 @@
 <body>
     <div class="grid__container">
         <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light  navbar-custom">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -41,6 +41,10 @@
                             <a class="nav-link" href="index.html">Inicio</a>
                         </div>
                     </div>
+                    <!--boton del carrito-->
+                    <button id="toggleMyModal" type="button" class="btn buttonStyles" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Ver mi carrito <i class="bi bi-bag-check-fill"></i>
+                    </button>
                 </div>
             </nav>
         </header>
@@ -50,37 +54,26 @@
                 <h1>Tienda lúdica de plantas</h1>
                 <p>Somos amantes de las plantas, por eso nos dedicamos a cuidarlas y divulgamos el conocimiento de
                     forma interactiva para que disfrutes de esta experiencia.<br>
-                    Cuidarlas nunca fue tan fácil.<br>
-                    Si no quieres perderte nada, dale click.</p>
+                    Cuidarlas nunca fue tan fácil.</p>
+
                 <button>Suscríbete</button>
-                <p>Tus plantas te lo agradecerán.</p>
+                <h2 class="callToAction">Si no quieres perderte nada, dale click.</h2>
+                <h3>Tus plantas te lo agradecerán.</h3>
+
             </hero>
 
 
-
-
-            <article id="cards" class="row"> </article>
-
-
-            <!--<section id="contenedor-productos" class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-3 col-md-2">
-                        <article id="cards" class="row"> </article>
-                    </div>
-                </div>
-            </section>-->
-
-
-            <section class="store box">
+            <section class="boxConImagen box store">
                 <h2>Tienda</h2>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
                     ut laoreet dolore magna.</p>
-                <button>Quiero ver más>>></button>
-                <div class="store_photos image">
-                    <!--<img src="images/img_2.jpg" alt="potus">
-                    <img src="images/img_1.jpg" alt="hombre sosteniendo planta">-->
+                <div class="image">
+                    <img class="images" src="images/img_1.jpg" alt="hombre con una planta">
+                    <img class="images" src="images/img_4.jpg" alt="hombre con una planta">
                 </div>
+                <a href="pages/tienda.html">Quiero ver más >>></a>
             </section>
+
 
             <section class="care box">
                 <h2>Cuidados, consejos y más</h2>
@@ -89,19 +82,19 @@
                     <h3>De que va esto, cuidar plantas?<a href="#"> ---></a></h3>
                     <h3>Semillas - como traer una planta al mundo?<a href="#"> ---></a></h3>
                 </div>
-                <button>Quiero ver más>>></button>
+                <a href="pages/cuidados.html">Quiero saber más >>></a>
             </section>
 
-            <section class="game box">
+
+            <section class="boxConImagen box game">
                 <h2>Lúdico</h2>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
                     ut laoreet dolore magna.</p>
-                <button>Quiero ver más>>></button>
-                <div>
-                    <!--<img src="icons/card.png" alt="">
-                    <img src="icons/research.png" alt="">-->
+                <div class="image">
+                    <img class="images" src="icons/card_bk.png" alt="carta de juego">
+                    <img class="images" src="icons/quiz.png" alt="juego quiz">
                 </div>
-
+                <a href="pages/ludico.html">Quiero juegar >>></a>
             </section>
 
         </main>

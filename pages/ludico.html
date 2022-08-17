@@ -25,7 +25,7 @@
 <body>
     <div class="grid__container">
         <header class="header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light  navbar-custom">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -41,13 +41,17 @@
                             <a class="nav-link" href="../index.html">Inicio</a>
                         </div>
                     </div>
+                    <!--boton del carrito-->
+                    <button id="toggleMyModal" type="button" class="btn buttonStyles" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Ver mi carrito <i class="bi bi-bag-check-fill"></i>
+                    </button>
                 </div>
             </nav>
         </header>
 
 
 
-    <main class="main">
+        <main class="main">
             <h1>Let's play</h1>
             <section class=" container-fluid juego">
                 <div id="cartasTarot"></div>
@@ -55,6 +59,29 @@
                 <button id="sacarCarta"><img src="../icons/boton.png" alt="botón para presionar"></button>
             </section>
         </main>
+
+        <section class="boxConImagen box game">
+            <h2>Lúdico</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                ut laoreet dolore magna.</p>
+            <div class="image">
+                <div id="cartasTarot">
+                    <img class="images" src="../icons/card_bk.png" alt="carta de juego">
+                </div>
+                
+            </div>
+            <h2>haz click y descubre tu destino</h2>
+            <button id="sacarCarta"><img src="../icons/boton.png" alt="botón para presionar"></button>
+        </section>
+
+        <!--<main class="main">
+            <h1>Let's play</h1>
+            <section class=" container-fluid juego">
+                <div id="cartasTarot"></div>
+                <h2>haz click y descubre tu destino</h2>
+                <button id="sacarCarta"><img src="../icons/boton.png" alt="botón para presionar"></button>
+            </section>
+        </main>-->
 
 
         <footer class="footer box">

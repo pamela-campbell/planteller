@@ -27,7 +27,7 @@
 }
 
 h1 {
-    @include tipografias(Bungee, 2rem, 400, 2.75rem, left, uppercase, none, 0.1rem);
+    @include tipografias(Bungee, 1.8rem, 400, 2.75rem, left, uppercase, none, 0.1rem);
 }
 
 h2 {
@@ -38,9 +38,10 @@ h2 {
 h3 {
     @include tipografias(Bungee, 1rem, 400, 2rem, center, uppercase, none, 0.1rem);
 }
+
 //h5b de la card js
-.card-title{
-    @include tipografias(Bungee, 1rem, 300, 2rem, center, uppercase, none, 0.1rem); 
+.card-title {
+    @include tipografias(Bungee, 1rem, 300, 2rem, center, uppercase, none, 0.1rem);
 }
 
 h4 {
@@ -53,6 +54,7 @@ p {
 }
 
 a {
+    @include tipografias(Inconsolata, 1.1rem, 400, 2rem, center, none, none, 0.1rem);
     color: $text-main-color;
     text-decoration: none;
     transition: 2s;
@@ -75,13 +77,14 @@ button {
         transform: scale(0.9);
     }
 }
-//boton card del js
-#boton{
-    @include tipografias(Inconsolata, 1.1rem, 400, 2rem, center, uppercase, none, 0.1rem);
-    padding: 2% 6%;
+
+//tienda y carrito
+.buttonStyles {
+    @include tipografias(Inconsolata, 1.1rem, 500, 2rem, center, uppercase, none, 0.1rem);
+    padding: 1% 2%;
     border: none;
-    border-radius: 20px;
-    color: $text-color-accent;
+    border-radius: 5px;
+    color: $text-main-color;
     background-color: $bg-brown;
     transition: 2s;
 
@@ -89,7 +92,6 @@ button {
         transform: scale(0.9);
     }
 }
-
 
 .main {
     grid-area: main;

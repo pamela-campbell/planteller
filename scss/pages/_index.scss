@@ -6,51 +6,76 @@
             width: 50%;
             margin: 0% auto 4% auto;
         }
-        p{
+
+        h1 {
+            margin: 3% auto;
+        }
+
+        p {
             text-align: justify;
         }
+
+        .callToAction {
+            @include tipografias(Inconsolata, 1.1rem, 400, 2rem, center, none, none, 0.1rem);
+            margin: 2% auto 0% auto;
+            color: $text-main-color
+        }
+
     }
 
     .box {
         @extend.hero;
+        justify-content: space-between;
         width: 80%;
         border: 10px solid #ffff;
-        height: 80vh;
-
-        p {
-            text-align: left;
-        }
-
-    }
-
-    .store {
-        @extend.hero;
-        background-color: $bg-green;
+        height: auto;
 
         h2 {
-            margin: 2% auto;
+            margin: 3% auto;
         }
-        .store_photos{
-            @include flex (auto, flex, row, center, flex-end, warp, 4% auto, 0%);
-            img{
-                height:50%;
-                margin: 3%;
+
+        p {
+            text-align: justify;
+            margin: 1% 2%;
+        }
+
+        a {
+            text-transform: uppercase;
+            color: $text-color-accent;
+            font-size: 1.3rem;
+            margin-bottom: 2%;
+            font-weight: 500;
+        }
+    }
+
+    .boxConImagen {
+        .image {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 3% auto 0% auto;
+
+            img {
+                width: 35%;
+                height: auto;
             }
         }
     }
 
-    .care {
+    .store {
+        background-color: $bg-green;
+    }
 
-        background-color: $bg-brown;
+    .care {
+        background-color: $bg-rose;
 
         .links {
-            height: 30vh;
+            margin: 2% auto;
         }
+
     }
 
     .game {
-
-        background-color: $bg-rose;
-
+        background-color: $bg-brown;
     }
 }

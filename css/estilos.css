@@ -10124,7 +10124,7 @@ textarea.form-control-lg {
 
 h1, .h1 {
   font-family: Bungee;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.75rem;
   text-align: left;
@@ -10191,6 +10191,14 @@ p {
 }
 
 a {
+  font-family: Inconsolata;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
   color: #262626;
   text-decoration: none;
   transition: 2s;
@@ -10212,30 +10220,30 @@ button {
   border: none;
   border-radius: 20px;
   color: #E9FF70;
-  background-color: #D6A578;
+  background-color: #d2a67c;
   transition: 2s;
 }
 button:hover {
   transform: scale(0.9);
 }
 
-#boton {
+.buttonStyles {
   font-family: Inconsolata;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 2rem;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.1rem;
-  padding: 2% 6%;
+  padding: 1% 2%;
   border: none;
-  border-radius: 20px;
-  color: #E9FF70;
-  background-color: #D6A578;
+  border-radius: 5px;
+  color: #262626;
+  background-color: #d2a67c;
   transition: 2s;
 }
-#boton:hover {
+.buttonStyles:hover {
   transform: scale(0.9);
 }
 
@@ -10253,7 +10261,44 @@ button:hover {
   transform: scale(1.1);
 }
 
-.main .hero, .main .store, .main .box {
+.header .navbar {
+  font-family: Inconsolata;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
+.header .navbar-toggler {
+  border: none;
+}
+
+/* change the background color */
+.navbar-custom {
+  background-color: #FAF9E5;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: #262626;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  color: #262626;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+  color: #E9FF70;
+}
+
+.main .hero, .main .box {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -10263,49 +10308,69 @@ button:hover {
   margin: 4% auto;
   padding: 0%;
 }
-.main .hero img, .main .store img, .main .box img {
+.main .hero img, .main .box img {
   width: 50%;
   margin: 0% auto 4% auto;
 }
-.main .hero p, .main .store p, .main .box p {
+.main .hero h1, .main .box h1, .main .hero .h1, .main .box .h1 {
+  margin: 3% auto;
+}
+.main .hero p, .main .box p {
   text-align: justify;
 }
+.main .hero .callToAction, .main .box .callToAction {
+  font-family: Inconsolata;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  margin: 2% auto 0% auto;
+  color: #262626;
+}
 .main .box {
+  justify-content: space-between;
   width: 80%;
   border: 10px solid white;
-  height: 80vh;
+  height: auto;
+}
+.main .box h2, .main .box .h2 {
+  margin: 3% auto;
 }
 .main .box p {
-  text-align: left;
+  text-align: justify;
+  margin: 1% 2%;
+}
+.main .box a {
+  text-transform: uppercase;
+  color: #E9FF70;
+  font-size: 1.3rem;
+  margin-bottom: 2%;
+  font-weight: 500;
+}
+.main .boxConImagen .image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3% auto 0% auto;
+}
+.main .boxConImagen .image img {
+  width: 35%;
+  height: auto;
 }
 .main .store {
-  background-color: #58CAA8;
-}
-.main .store h2, .main .store .h2 {
-  margin: 2% auto;
-}
-.main .store .store_photos {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  flex-wrap: warp;
-  margin: 4% auto;
-  padding: 0%;
-}
-.main .store .store_photos img {
-  height: 50%;
-  margin: 3%;
+  background-color: #c1d7ae;
 }
 .main .care {
-  background-color: #D6A578;
+  background-color: #dcbde3;
 }
 .main .care .links {
-  height: 30vh;
+  margin: 2% auto;
 }
 .main .game {
-  background-color: #E2B2C1;
+  background-color: #d2a67c;
 }
 
 .main .juego {
@@ -10337,7 +10402,7 @@ button:hover {
 }
 .main .juego #cartasTarot .enlaceTexto {
   color: #E9FF70;
-  background-color: #D6A578;
+  background-color: #d2a67c;
 }
 .main .juego h2, .main .juego .h2 {
   color: #F2766A;

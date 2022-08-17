@@ -1,0 +1,32 @@
+.header {
+    .navbar {
+        @include tipografias(Inconsolata, 1.3rem, 600, 3rem, center, uppercase, none, 0.1rem);
+           }
+
+    .navbar-toggler {
+        border: none;
+         }
+}
+
+/* change the background color */
+.navbar-custom {
+    background-color:$main-bg;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color:$text-main-color;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: $text-main-color;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color:$text-color-accent;
+}
