@@ -1,13 +1,14 @@
 //Tienda
 
-//Array vacio para pushear los objetos de la funcion cargarProductos
+//Array vacio para almacenar el push de los objetos de la funcion cargarProductos
 const productos = [];
 
-//Array vacio para pushear los objetos de la compra
+//Array vacio  para almacenar el push de los objetos de agregarAlCarrito 
 let carrito = [];
+
+// Storage guardar la info de la selección de productos
 if (localStorage.getItem("carrito") != null) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
-    //cargarlo a la tabla
 }
 
 //Ejecuto la funcion para cargar los productos al array
@@ -18,7 +19,7 @@ dibujarProductos();
 
 //Funcion para cards  de productos de la tienda 
 
-function dibujarProductos (){
+function dibujarProductos() {
     let cards = document.getElementById("cards");
     for (const producto of productos) {
         let card = document.createElement("div");
@@ -34,30 +35,31 @@ function dibujarProductos (){
     `;
         cards.append(card);
     }
-    //eventos boton
+
+    //Funcion para  dibujar, pushear al array vacio los de productos seleccionados y guardarlos
+    function agregarAlCarrito(producto) {
+        carrito.push(producto);
+        document.getElementById("tablabody").innerHTML += `
+            <tr>
+                <td>${producto.isbn}</td>
+                <td>${producto.nombre}</td>
+                <td>$ ${producto.precio}</td>
+            </tr>
+        `;
+
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    }
+
+
+    //Eventos para el boton LO QUIERO
     productos.forEach(producto => {
-        //evento para cada boton
-        document.getElementById(`botonIsbn${producto.isbn}`).addEventListener('click',function(){
+        document.getElementById(`botonIsbn${producto.isbn}`).addEventListener('click', function () {
             agregarAlCarrito(producto);
         });
     });
 }
 
-function agregarAlCarrito(producto){
-    carrito.push(producto);
-   
-    //agrego una fila nueva a la tabla body
-    document.getElementById("tablabody").innerHTML+=`
-        <tr>
-            <td>${producto.isbn}</td>
-            <td>${producto.nombre}</td>
-            <td>$ ${producto.precio}</td>
-        </tr>
-    `;
 
-    //alert("Producto: "+producto.nombre+" agregado al carrito!"); hacer un boton para aceptar
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
 
 //PARA EL CONFIRMA PRODUCTO
 //     let confirma = document.getElementById("ok").innerHTML+=`
