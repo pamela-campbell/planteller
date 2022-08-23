@@ -1,18 +1,17 @@
 //Tienda
 
-//carrito 
-class ElementoCarrito {
-    constructor(producto, cantidad) {
-        this.producto = producto;
-        this.cantidad = cantidad;
-    }
-}
-
 //Array vacio para almacenar el push de los objetos de la funcion cargarProductos
 const productos = [];
 
 //Array vacio  para almacenar el push de los objetos de agregarAlCarrito 
 let carrito = [];
+let productoscarrito = [];
+
+const contenedorCarritoCompras = document.getElementById("productoCargadoModal")
+
+const contenedorFooterCarrito = document.getElementById("footerModal");
+
+
 
 // Storage guardar la info de la selección de productos
 if (localStorage.getItem("carrito") != null) {
@@ -24,6 +23,9 @@ cargarProductos();
 
 //Ejecuto la funcion para dibujar las cards de los productos ya cargados
 dibujarProductos();
+
+//Ejecuto la funcion para cargar los productos al array del Carrito
+dibujarCarrito();
 
 //Funcion para cards  de productos de la tienda 
 
@@ -51,28 +53,10 @@ function dibujarProductos() {
             <tr>
                 <td>${producto.isbn}</td>
                 <td>${producto.nombre}</td>
-                <td><input id="cantidad-producto-${producto.isbn}" type="number" value="${1}" min="1" max="20" step="1" style="width: 70px;"/></td>
                 <td>$ ${producto.precio}</td>
-                <td>$ ${producto.precio*1}</td>
-                </tr>
+            </tr>
         `;
-        sumaCarrito+=elemento.cantidad*elemento.producto.precio;
 
-            //agregamos evento a carrito
-            let cantidadProductos = document.getElementById(`cantidad-producto-${producto.isbn}`);
-            
-            cantidadProductos.addEventListener("change", (e) => {
-                let nuevaCantidad = e.target.value;
-                elemento.cantidad = nuevaCantidad;
-                dibujarCarrito();
-            });
-
-            let borrarProducto = document.getElementById(`eliminar-producto-${elemento.producto.isbn}`);
-
-            borrarProducto.addEventListener("click", (e) => {
-                removerProductoCarrito(elemento);
-                dibujarCarrito();
-            });
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }
 
@@ -84,19 +68,3 @@ function dibujarProductos() {
         });
     });
 }
-
-
-
-//PARA EL CONFIRMA PRODUCTO
-//     let confirma = document.getElementById("ok").innerHTML+=`
-//     <div>
-//         <p> Producto: ${producto.isbn} fue agregado</p>
-//     </div>
-// `;
-
-
-// let ok = confirma;
-// if (localStorage.getItem("carrito") != null) {
-//     carrito = JSON.parse(localStorage.getItem("carrito"));
-//     //cargarlo a la tabla
-// }
