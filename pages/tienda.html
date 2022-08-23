@@ -51,10 +51,10 @@
         </header>
 
         <main class="main">
-            <h1>TIENDA</h1>
+        
 
             <!-- Modal pop up objetos en carrito-->
-           <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -75,7 +75,8 @@
                                             <th scope="col"></th>
                                         </tr>
                                     </thead>
-                                    <tbody id="items"></tbody>
+                                    <tbody id="tablabody">                                 
+                                    </tbody>
                                     <tfoot>
                                         <tr id="footer">
                                             <th scope="row" colspan="6">Carrito vacío &#127793 Comienza a comprar tus
@@ -83,7 +84,7 @@
                                         </tr>
                                     </tfoot>
                                 </table>
-                                <div class="row" id="cards"></div>
+                                <div class="row" id="cartas"></div>
                             </div>
 
                         </div>
@@ -93,20 +94,29 @@
                         </div>
                     </div>
                 </div>
-            </div>-->
-
+            </div>
+            <h1>TIENDA</h1>
             <!--------cards productos------->
 
-            <section id="cards" class="row"> </section>
- <!--------LISTA DE CARRITO------->
+            <div class="container-fluid">
+               
+                <section class="d-flex justify-content-center align-items-center mt-5">
+                    
+                    <div id="cards" class="row m-3"></div>
+                </section>
+            </div>
+          
+
+            <!--------LISTA DE CARRITO------->
             <div>
                 <h4>Tu carrito:</h4>
 
-                <div id="ok"></div><!-------OK CONFIRMA DE PRODUCTO------->
+                <div id="ok"></div>
+                <!-------OK CONFIRMA DE PRODUCTO------->
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
+                            <th scope="col">ISBN</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Precio</th>
                         </tr>
@@ -116,7 +126,7 @@
                     </tbody>
                 </table>
             </div>
-            
+
         </main>
 
         <footer class="footer box">
@@ -129,7 +139,7 @@
     <script defer src="../js/js_bs/bootstrap.js"></script>
     <!--link javaScript-->
     <script defer src="../js/tienda.js"></script>
-    <script defer src="../js/script.js"></script>
+    <script defer src="../js/prueba.js"></script>
 
 </body>
 
